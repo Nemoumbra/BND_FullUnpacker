@@ -17,8 +17,8 @@ int main() {
 
     BND archive;
     try {
-        if (!archive.load(archive_path.string())) {
-            "archive.load(...) claims the file was not loaded due to some error\n";
+        if (!archive.load(archive_path.string(), false)) {
+            std::cout << "archive.load(...) claims the file was not loaded due to some error\n";
             std::cout << "Aborting the program\n";
             exit(1);
         }
@@ -39,7 +39,7 @@ int main() {
 
     if (!confirmation) {
         std::cout << "No action will be taken, exiting...\n";
-        return;
+        return 0;
     }
 
     

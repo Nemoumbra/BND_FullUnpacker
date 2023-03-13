@@ -1,0 +1,1 @@
+This tool can unpack the "whole" BND archive it is given. No command line arguments support, no BNS support.
